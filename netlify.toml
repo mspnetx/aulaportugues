@@ -1,0 +1,6 @@
+[build]
+  publish = "public"
+
+# Evita expor arquivos fora da pasta publicada.
+[build.processing]
+  skip_processing = false
