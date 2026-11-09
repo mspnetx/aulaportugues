@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#172b46"><meta name="description" content="Desafio de Língua Portuguesa para o 6º ano: 100 questões, oito módulos e explicações.">
+<title>Português Master — 6º ano</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="top"><div class="brand">📚 <span>PORTUGUÊS MASTER</span></div><div class="tag">6º ANO • SIMULADO</div></header>
+<main class="wrap">
+<section id="home" class="panel">
+  <div class="hero"><div class="eyebrow">MISSÃO DE APRENDIZAGEM</div><h1>Desafio de Português</h1><p>100 questões para testar seus conhecimentos. Uma questão de cada vez, com explicação depois de responder.</p></div>
+  <div class="grid2">
+    <div class="card"><h2>🎓 Modo aluno</h2><label for="nickname">Como podemos chamar você?</label><input id="nickname" maxlength="24" autocomplete="nickname" placeholder="Seu apelido"><label for="studentCode">Código da prova</label><input id="studentCode" autocomplete="off" placeholder="Código fornecido pelo responsável"><button id="startBtn" class="primary">Começar / continuar prova</button><p class="hint">Use o mesmo apelido e código para continuar sua tentativa.</p></div>
+    <div class="card"><h2>👨‍🏫 Modo responsável</h2><p>Acompanhe as respostas, o progresso e o desempenho por módulo.</p><label for="parentPin">Código de acesso do responsável</label><input id="parentPin" type="password" autocomplete="current-password" placeholder="PIN do responsável"><button id="parentBtn" class="secondary">Abrir painel</button><p class="hint">O PIN é validado no servidor e não fica salvo no navegador.</p></div>
+  </div>
+  <div id="configNote" class="notice" role="status"></div>
+</section>
+<section id="quiz" class="panel hidden">
+  <div class="quizhead"><div><div class="eyebrow" id="moduleLabel">MÓDULO</div><h2 id="studentGreeting">Vamos lá!</h2></div><div class="score" id="scoreBox">0 pontos</div></div>
+  <div class="progressline"><div id="progressBar"></div></div><div class="meta"><span id="progressText">Questão 1 de 100</span><span id="difficulty">Fácil</span></div>
+  <div class="question"><div id="questionNumber" class="qnum"></div><h2 id="prompt"></h2><div id="options" class="options"></div></div>
+  <div id="feedback" class="feedback hidden" role="status" aria-live="polite"></div>
+  <div class="actions"><button id="nextBtn" class="primary hidden">Próxima questão →</button><button id="backHomeBtn" class="ghost">Sair para início</button></div>
+</section>
+<section id="parent" class="panel hidden">
+  <div class="quizhead"><div><div class="eyebrow">PAINEL DO RESPONSÁVEL</div><h1>Acompanhamento</h1><p id="parentStatus" class="hint"></p></div><button id="refreshBtn" class="secondary">Atualizar</button></div>
+  <div class="stats"><div class="stat"><strong id="answeredCount">0</strong><span>Respondidas</span></div><div class="stat"><strong id="correctCount">0</strong><span>Acertos</span></div><div class="stat"><strong id="percentCount">0%</strong><span>Aproveitamento</span></div></div>
+  <h2>Desempenho por módulo</h2><div id="moduleStats" class="moduleStats"></div>
+  <h2>Respostas recentes</h2><div class="tablewrap"><table><thead><tr><th>Questão</th><th>Assunto</th><th>Resposta</th><th>Resultado</th><th>Horário</th></tr></thead><tbody id="answerRows"></tbody></table></div>
+  <button id="parentHomeBtn" class="ghost">Voltar</button>
+</section>
+<section id="finish" class="panel hidden">
+  <div class="hero"><div class="eyebrow">MISSÃO CONCLUÍDA</div><h1>Você terminou! 🎉</h1><p id="finalMessage"></p></div>
+  <div class="stats"><div class="stat"><strong id="finalScore">0/100</strong><span>Acertos</span></div><div class="stat"><strong id="finalPercent">0%</strong><span>Aproveitamento</span></div></div>
+  <p>Converse com seu responsável sobre os assuntos que merecem mais uma revisão.</p><button id="finishHomeBtn" class="primary">Voltar ao início</button>
+</section>
+</main>
+<footer>Português Master • Material de estudo para o 6º ano</footer>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
