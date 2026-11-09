@@ -113,7 +113,7 @@ Deno.serve(async (req) => {
         nickname: attempt.nickname,
         answered: (answers || []).length,
         correct,
-        percent: Math.round(correct),
+        percent: (answers || []).length ? Math.round(correct / (answers || []).length * 100) : 0,
         modules,
         answers: (answers || []).map(a => ({
           question_id: a.question_id, choice: a.choice, correct: a.is_correct,
