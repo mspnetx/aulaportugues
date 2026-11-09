@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "portugues-master-pages"
   cancel-in-progress: true
 
 jobs:
