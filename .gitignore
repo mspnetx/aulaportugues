@@ -1,0 +1,16 @@
+# Configuração local do frontend: nunca versionar chaves ou URLs privadas
+public/config.js
+.env
+.env.*
+!.env.example
+
+# Arquivos e estado local do Supabase
+supabase/.temp/
+supabase/.branches/
+supabase/schema-and-seed.sql
+supabase/seed.sql
+
+# Sistema/editor
+.DS_Store
+Thumbs.db
+.vscode/
