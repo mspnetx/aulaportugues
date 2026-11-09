@@ -1,0 +1,3 @@
+# Configuração local da Supabase CLI para o projeto Português Master.
+[functions.quiz-api]
+verify_jwt = false
